@@ -1,0 +1,99 @@
+/* nav component */
+
+// Variables
+@import "styles.variables.less";
+
+@menuLinkFontSize: @midFontSize;
+
+.nav-container {
+  background-color: @vDarkBlue;
+  height: @screenHeight;
+  width: @menuWidth;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+}
+
+#blu {
+  font-size: @vLargeFontSize;
+  color: @white;
+  text-align: center;
+  display: inline-block;
+  margin: 2%;
+}
+
+#gillie {
+  font-size: @vLargeFontSize;
+  color: @brightBlue;
+  text-align: center;
+  display: inline-block;
+  margin: 2%;
+}
+
+#image {
+  background-image: url("../../assets/images/me.jpg");
+  background-size: cover;
+  margin: 10%;
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: @brightBlue;
+  border-width: 1.5px;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+
+  a {
+    &:visited,
+    &:link {
+      height: 8%;
+      width: 100%;
+      display: block;
+      border-top-style: solid;
+      border-top-color: @navBorderBlue;
+      border-top-width: 0.04em;
+      text-decoration: none;
+    }
+    &:hover {
+      background-color: @darkBlue;
+    }
+    &:active {
+      background-color: @brightBlue;
+    }
+  }
+}
+
+.parent-link {
+  padding-left: 5% !important;
+  color: @white;
+  text-decoration: none;
+  font-size: @menuLinkFontSize;
+  min-width: 100px;
+}
+
+.child-link {
+  padding-left: 16% !important;
+  color: @white;
+  text-decoration: none;
+  font-size: @menuLinkFontSize;
+  min-width: 100px;
+}
+
+.active-link {
+  background-color: @brightBlue !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  #blu {
+    display: block;
+    font-size: @largeFontSize;
+  }
+
+  #gillie {
+    display: block;
+    font-size: @largeFontSize;
+  }
+}

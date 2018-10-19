@@ -1,0 +1,16 @@
+<div class="component-container">
+
+  <div class="flex-container-center-wrap">
+    <div *ngFor="let project of projects" class="project-container">
+      <div class="flex-container-center">
+        <div class="project" routerLink="/project/{{project.id}}">
+          <div class="project-logo" [style.background-image]="project.logo"></div>
+          <div class="project-title flex-container-center">{{project.name | uppercase}}</div>
+        </div>
+      </div>
+      <div *ngIf="showProjectButton" class="view-button-container">
+        <button class="project-button">VIEW</button>
+      </div>
+    </div>
+  </div>
+</div>

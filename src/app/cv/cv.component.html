@@ -1,0 +1,53 @@
+<div class="component-container">
+  <div class="flex-container-center">
+
+    <div class="cv" (mouseenter)="showCvButtons()" (mouseleave)="hideCvButtons()">
+
+      <div *ngIf="showButtons" class="download-view-container">
+        <div class="flex-container-center-column">
+          <button class="cv-button" (click)="fullScreenCv()">VIEW</button>
+          <a class="cv-button" target="_self" href="../../assets/files/BenGillie-CV.pdf" download>DOWNLOAD</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="fullscreen-overlay" [style.display]="overlayDisplay">
+
+  <div class="cv-overlay">
+    <img class="cv-overlay-image" src="../../assets/images/CV.compressed.jpg" alt="cv image" [style.width.vw]="cvOverlayWidth"
+      [style.height.vw]="cvOverlayHeight">
+  </div>
+
+  <div class="cv-overlay-menu">
+    <div class="flex-container-center">
+      <div class="cv-overlay-menu-button" alt="Zoom In" (click)="zoomIn()">
+        <div class="flex-container-center">
+          <div class="cv-overlay-menu-zoomIn"></div>
+        </div>
+      </div>
+      <div class="cv-overlay-menu-button" alt="Zoom Out" (click)="zoomOut()">
+        <div class="flex-container-center">
+          <div class="cv-overlay-menu-zoomOut"></div>
+        </div>
+      </div>
+      <a class="cv-overlay-menu-button" alt="Download" target="_self" href="../../assets/files/BenGillie-CV.pdf" download>
+        <div class="flex-container-center">
+          <div class="cv-overlay-menu-download"></div>
+        </div>
+      </a>
+      <div class="cv-overlay-menu-button" alt="Close" (click)="closeFullscreenCv()">
+        <div class="flex-container-center">
+          <div class="cv-overlay-menu-close"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- attach background images to dom -->
+<img src="../../assets/images/CV.compressed.jpg" style="display:none;" alt="" hidden>

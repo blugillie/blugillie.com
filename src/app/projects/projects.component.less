@@ -1,0 +1,39 @@
+// Projects Styles
+
+// Variables
+@import "styles.variables.less";
+
+.project-container {
+  background-color: @darkBlue;
+  height: 50%;
+  width: 50%;
+}
+
+.project {
+  border-color: @darkBlue;
+  border-style: solid;
+  border-width: 1px;
+  height: 90%;
+  text-decoration: none;
+  width: 90%;
+
+  &:hover {
+    border-color: @brightBlue;
+  }
+}
+
+.project-logo {
+  background-color: @darkBlue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 80%;
+  width: 100%;
+}
+
+.project-title {
+  color: @white;
+  font-size: @midFontSize;
+  height: 20%;
+  // text-align: center;
+}

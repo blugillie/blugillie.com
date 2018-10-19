@@ -1,0 +1,107 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Variables
+@import "styles.variables.less";
+
+// Buttons
+
+.mid-button {
+  font-size: @midButtonFontSize;
+  margin: @midButtonMargin;
+  padding: @midButtonPadding;
+  text-align: center;
+  text-decoration: none;
+  width: @midButtonWidth;
+}
+
+.overlay-button {
+  font-size: @overlayButtonFontSize;
+  text-align: center;
+  width: @overlayButtonWidth;
+}
+
+/* Containers */
+
+.component-container {
+  background-color: @darkBlue;
+  height: @screenHeight;
+  margin-left: @componentMarginLeft;
+  width: @componentWidth;
+}
+
+/* CSS Flex-Box */
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container-center-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-container-center-horizontal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.flex-container-center-vertical {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.flex-container-center-wrap {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+/* CCS Overlay */
+.fullscreen-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: @screenWidth; /* Full width (cover the whole page) */
+  height: @screenHeight; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85); /* Black background with opacity */
+  z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+/* CCS Grid Columns */
+
+@media only screen and (min-width: 641px) {
+}
+
+@media only screen and (min-width: 1025px) {
+}

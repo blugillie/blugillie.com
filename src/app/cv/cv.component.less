@@ -1,0 +1,113 @@
+/* cv styles */
+
+//Variables
+@import "styles.variables.less";
+@import "styles.less";
+
+.cv {
+  background-image: url("../../assets/images/CV.compressed.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 30em;
+  height: 42.42em;
+}
+
+.download-view-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cv-button {
+  .mid-button;
+  background-color: @brightBlue;
+  color: @white;
+}
+
+.cv-overlay {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: scroll;
+  text-align: center;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.cv-overlay-image {
+  margin-top: 7.5vh;
+  margin-bottom: 7.5vh;
+}
+
+.cv-overlay-menu {
+  height: 7.5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+}
+
+.cv-overlay-menu-button {
+  .overlay-button;
+  height: 100%;
+  background-color: @darkBlue;
+  color: @white;
+
+  &:hover {
+    background-color: @brightBlue;
+  }
+}
+
+.cv-overlay-menu-zoomIn {
+  height: 70%;
+  width: 100%;
+
+  background-image: url("../../assets/icons/plus-magnify.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cv-overlay-menu-zoomOut {
+  height: 70%;
+  width: 100%;
+
+  background-image: url("../../assets/icons/minus-magnify.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cv-overlay-menu-download {
+  height: 70%;
+  width: 100%;
+
+  background-image: url("../../assets/icons/download.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cv-overlay-menu-close {
+  height: 70%;
+  width: 100%;
+
+  background-image: url("../../assets/icons/close.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* not in use **************************************** */
+
+.info-fullscreen {
+  height: 10vh;
+  width: 75vw;
+  background-color: @brightBlue;
+
+  color: @white;
+  font-size: 50px;
+  text-align: center;
+}
